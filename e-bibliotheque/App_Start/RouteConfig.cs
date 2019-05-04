@@ -18,6 +18,36 @@ namespace e_bibliotheque
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Afficher",
+                url: "{controller}",
+                defaults: new { controller = "Afficher", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Auteurs",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Afficher", action = "Auteurs", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+              name: "Auteur",
+              url: "{controller}/{action}/{id}",
+              defaults: new { controller = "Afficher", action = "Auteur", id = UrlParameter.Optional }
+          );
+
+            routes.MapRoute(
+                   name: "Livre",
+                   url: "{controller}/{action}/{id}",
+                   defaults: new { controller = "Afficher", action = "Livre", id = UrlParameter.Optional }
+               );
+
+            routes.MapRoute(
+                  name: "Rechercher",
+                  url: "{controller}/{Livre}/{id}",
+                  defaults: new { controller = "Rechercher", action = "Livre", id = UrlParameter.Optional }
+              );
         }
     }
 }
